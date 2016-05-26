@@ -5,7 +5,7 @@ if(!isset($_SESSION))
 
 if(!isset($_SESSION["user"])){
 	echo '<script languaje="javascript">
-				alert("Datos no válidos");
+				alert("Usuario no registrado");
 				self.location = "../index.php"
 			</script>';
 }

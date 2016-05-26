@@ -36,18 +36,9 @@
 				   otro elemento que se pueda ocultar al minimizar la barra -->
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a class="content_cleaner" href="#">Examenes Inscritos</a></li>
-					<li><a class="content_cleaner" href="#">Calificaciones</a></li>
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					  Gestión <b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-					  <li><a class="content_cleaner" href="#">Inscribir</a></li>
-					  <li><a class="content_cleaner" href="#">Dar de baja</a></li>
-					</ul>
-				  </li>
+					<li class="active"><a data-toggle="tab" href="#Home">Home</a></li>
+					<li><a data-toggle="tab" href="#Exams">Examenes Inscritos</a></li>
+					<li><a data-toggle="tab" href="#Signs">Calificaciones</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a class="content_cleaner" href="../sessions/user_logout.php">Logout</a></li>
@@ -66,8 +57,59 @@
 					<p>2008600448</p>
 				</div>
 			</div>
-			<div id="display" class="col-xs-6 col-sm-9">
-				<h3>Hola mundo</h3>
+			<div class="tab-content">
+				<div id="Home" class="col-xs-6 col-sm-9 tab-pane fade in active">
+					<h1>Hola</h1>
+				</div>
+				<div id="Exams" class="col-xs-6 col-sm-9 tab-pane fade">
+					<div class="list-group">
+						<li class="list-group-item"><div id="Header"><h3>Exámenes inscritos</h3></div></li>
+							<?php
+							
+							?>
+						<li class="list-group-item">
+							<div class="panel panel-info">
+								<div class="panel-heading">Examen A</div>
+								<div class="panel-body">
+									<div class="btn-group-vertical">
+									  <button type="button" class="btn btn-danger">Dar de baja</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-group-item"><div id="Footpage">
+							<div class="btn-group-vertical">
+								<button type="button" class="btn btn-success">Inscribir</button>
+							</div>
+						</div></li>
+					</div>
+				</div>
+				<div id="Signs" class="col-xs-6 col-sm-9 tab-pane fade">
+					<div class="list-group">
+						<li class="list-group-item"><div id="Header">Calificaciones</div></li>
+						<li class="list-group-item"><div id="tabla_calif">
+							<table class="table">
+								<thead>
+								  <tr>
+									<th>Examen</th>
+									<th>Fecha</th>
+									<th>Calificación</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<td>Examen A</td>
+									<td>10/12/1990</td>
+									<td>0.0</td>
+								  </tr>
+								  <?php
+										//Aquí van a inyectarse las calificaciones desde la BD
+									?>
+								</tbody>
+							</table>
+						</div></li>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
