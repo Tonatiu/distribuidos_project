@@ -20,10 +20,10 @@ class Client{
 		$responce = $this->cliente->validarAlumno($params);
 
 		print_r($responce);
-		echo "<div class=\"alert alert-success\">".
+		/*echo "<div class=\"alert alert-success\">".
 				"<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".
 				"<strong> The result is: ".$responce->return."</strong>".
-			"</div>";
+			"</div>";*/
 	}
 }
 
